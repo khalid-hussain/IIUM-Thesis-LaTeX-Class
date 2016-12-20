@@ -14,7 +14,6 @@ pdf: $(THESIS) 4rmpandoc
 view: $(THESIS-PDF)
 	start $(THESIS-PDF)
 
-
 .PHONY: clean
 
 clean:
