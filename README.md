@@ -8,6 +8,15 @@ A document style class for the IIUM Thesis format.
 - Conversion to actual style class.
 - Pandoc support.
 
+## Lists
+
+- Table of Contents
+- List of Figures
+- List of Tables
+- List of Symbols
+- List of Cases
+- List of Statutes
+
 # License
 
 This project is licensed under GNU GPLv3. Reference files for the IIUM Thesis
