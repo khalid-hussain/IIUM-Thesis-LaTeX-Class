@@ -1,31 +1,49 @@
-\documentclass[12pt, parskip=full]{memoir}
+\documentclass[12pt, a4paper, oneside, parskip=full]{memoir}
 
 %******************************
-%      Table of Contents
+%      Table of con../fig../tab..
 %*************************
 \renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\listtablename}{LIST OF TABLES}
 \renewcommand{\printtoctitle}[1]{\centering\Large\bfseries #1}
+\renewcommand{\printloftitle}[1]{\centering\Large\bfseries #1}
+\renewcommand{\printlottitle}[1]{\centering\Large\bfseries #1}
+\renewcommand{\chapternumberline}[1]{\MakeTextUppercase{\chaptername\ 
+\numtoName{#1}: }}
+\setcounter{tocdepth}{3}
+\abstractintoc % Show abstract in ToC
+\renewcommand\cftchaptername{\chaptername~}
 
 \usepackage{times} % Use Times font
-\usepackage{setspace} % Used to set line spacing
 
 %******************************
 %      Spacing
 %*************************
 \usepackage{parskip}
 \setlength{\parindent}{1.2cm} % Paragraph indent
-\frenchspacing
+\frenchspacing % Use single space after end of sentence
 \DoubleSpacing
 
 %******************************
 %      Testing Only
 %*************************
 \usepackage{blindtext}
+\usepackage{lipsum}
+%\usepackage[showframe, pass]{geometry} % Show page frames
 
 \begin{document}
 
 \frontmatter
+\
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+\newpage
+
 \tableofcontents*
+\listoftables
+\listoffigures
 
 \mainmatter
 
