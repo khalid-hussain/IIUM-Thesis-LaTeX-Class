@@ -1,12 +1,34 @@
 # IIUM-Thesis-LaTeX-Class
 
 A document style class for the IIUM Thesis format.
+Partial pandoc support is available but a template would be appreciated.
+
+# Usage
+
+The project comes with a makefile. Edit `pandoc-source.md` and run:
+
+- `make pdf` Creates the resultant PDF file entitled `thesis.pdf`.
+- `make clean` Cleans working LaTeX files. Useful for development or once you've finalized ouput.
 
 # To Do
 
 - Get simple LaTeX document up and running with most of the style requirements.
 - Conversion to actual style class.
-- Pandoc support.
+- Pandoc template support.
+- Chapter headings in all uppercase include the number in words. Small Caps hack is not acceptable.
+- Get all the margins correct.
+
+## Front matter
+
+- Cover Page
+- Title Page
+- Arabic Abstract
+- Approval Page (Masters and PhD)
+- Declaration
+- Copyright Joint
+- Copyright IIUM
+- Copyright Student
+- Acknowledgements
 
 ## Lists
 
@@ -19,6 +41,8 @@ A document style class for the IIUM Thesis format.
 
 # License
 
-This project is licensed under GNU GPLv3. Reference files for the IIUM Thesis
-are not; they are there for anyone who wants to help out with this
-project.
+This project is licensed under GNU GPLv3.
+
+The files under the `_reference` directory are not.
+They are for project development purposes only.
+The rights are reserved by their respective owners.
