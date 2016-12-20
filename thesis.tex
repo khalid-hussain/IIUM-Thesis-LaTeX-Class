@@ -1,9 +1,24 @@
-\documentclass[12pt]{memoir}
-\usepackage{times}
+\documentclass[12pt, parskip=full]{memoir}
+
+%******************************
+%      Table of Contents
+%*************************
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\printtoctitle}[1]{\centering\Large\bfseries #1}
+
+\usepackage{times} % Use Times font
 \usepackage{setspace} % Used to set line spacing
 
 %******************************
-%          TEST Packages
+%      Spacing
+%*************************
+\usepackage{parskip}
+\setlength{\parindent}{1.2cm} % Paragraph indent
+\frenchspacing
+\DoubleSpacing
+
+%******************************
+%      Testing Only
 %*************************
 \usepackage{blindtext}
 
@@ -14,5 +29,10 @@
 
 \mainmatter
 
-\blinddocument
+\Blinddocument
+\subsubsection{Testing Sub-Sub section}
+
+\Blinddocument
+
+\backmatter
 \end{document}
