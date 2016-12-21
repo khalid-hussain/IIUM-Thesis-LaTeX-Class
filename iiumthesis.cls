@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{iiumthesis}[2016/12/22 IIUM Thesis class]
 
+% \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}
 \LoadClass[12pt, a4paper, oneside, parskip=full]{memoir}
 
 %******************************
