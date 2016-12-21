@@ -21,4 +21,4 @@ doc: $(DOC-SOURCE)
 .PHONY: clean
 
 clean:
-	rm -f *.aux *.lof *.lot *.toc *.log *.out
+	rm -f *.aux *.lof *.lot *.toc *.log *.out *.synctex.gz
