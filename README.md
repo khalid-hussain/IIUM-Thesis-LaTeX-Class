@@ -20,8 +20,8 @@ The project comes with a makefile. Edit `pandoc-source.md` and run:
 
 ## Front matter
 
-- Cover Page
-- Title Page
+- ~~Cover Page~~
+- ~~Title Page~~
 - Arabic Abstract
 - Approval Page (Masters and PhD)
 - Declaration
