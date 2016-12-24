@@ -42,5 +42,4 @@
 %******************************
 %      Others
 %*************************
-\usepackage{hyperref}
 \RequirePackage{hyperref}
