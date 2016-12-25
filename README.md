@@ -23,7 +23,8 @@ The project comes with a makefile. Edit `pandoc-source.md` and run:
 - ~~Cover Page~~
 - ~~Title Page~~
 - Arabic Abstract
-- Approval Page (Masters and PhD)
+- ~~Approval Page (Masters)~~
+- Approval Page (PhD)
 - Declaration
 - Copyright Joint
 - Copyright IIUM
