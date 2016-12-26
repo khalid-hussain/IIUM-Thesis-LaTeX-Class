@@ -27,7 +27,6 @@
 \usepackage{parskip}
 \setlength{\parindent}{1.2cm} % Paragraph indent
 \frenchspacing % Use single space after end of sentence
-\DoubleSpacing
 
 %******************************
 %      Others
@@ -46,19 +45,19 @@
 %******************************
 \frontmatter
 %*************************
-\includepdf[addtotoc={1,section,1,Cover Page,Cover}]{frontmatter/coverpage.pdf}
-\includepdf[addtotoc={1,section,1,Title Page,Title}]{frontmatter/titlepage.pdf}
+\includepdf[addtotoc={1,chapter,1,Cover Page,Cover}]{frontmatter/coverpage.pdf}
+\includepdf[addtotoc={1,chapter,1,Title Page,Title}]{frontmatter/titlepage.pdf}
 % Abstract in English
 % Abstract in Arabic
-\includepdf[addtotoc={1,section,1,Approval 
+\includepdf[addtotoc={1,chapter,1,Approval 
 Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
-\includepdf[addtotoc={1,section,1,Declaration 
+\includepdf[addtotoc={1,chapter,1,Declaration 
 ,Declaration}]{frontmatter/declarationPage.pdf}
-\includepdf[addtotoc={1,section,1,Copyright-Joint,Copyright-Joint}]{frontmatter/copyrightJointPage.pdf}
-\includepdf[addtotoc={1,section,1,Copyright-IIUM,Copyright-IIUM}]{frontmatter/copyrightIIUMPage.pdf}
-\includepdf[addtotoc={1,section,1,Copyright-Student,Copyright-Student}]{frontmatter/copyrightStudentPage.pdf}
-\includepdf[addtotoc={1,section,1,Dedication,Dedication}]{frontmatter/dedicationPage.pdf}
-\includepdf[addtotoc={1,section,1,Acknowledgments,Acknowledgments}]{frontmatter/acknowledgmentPage.pdf}
+\includepdf[addtotoc={1,chapter,1,Copyright-Joint,Copyright-Joint}]{frontmatter/copyrightJointPage.pdf}
+\includepdf[addtotoc={1,chapter,1,Copyright-IIUM,Copyright-IIUM}]{frontmatter/copyrightIIUMPage.pdf}
+\includepdf[addtotoc={1,chapter,1,Copyright-Student,Copyright-Student}]{frontmatter/copyrightStudentPage.pdf}
+\includepdf[addtotoc={1,chapter,1,Dedication,Dedication}]{frontmatter/dedicationPage.pdf}
+\includepdf[addtotoc={1,chapter,1,Acknowledgments,Acknowledgments}]{frontmatter/acknowledgmentPage.pdf}
 
 \begin{abstract}
 \lipsum[1]
@@ -72,7 +71,7 @@ Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
 %******************************
 \mainmatter
 %*************************
-
+\DoubleSpacing
 \Blinddocument
 \subsubsection{Testing Sub-Sub section}
 

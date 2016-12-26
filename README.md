@@ -17,6 +17,7 @@ The project comes with a makefile. Edit `pandoc-source.md` and run:
 - Pandoc template support.
 - Chapter headings in all uppercase include the number in words. Small Caps hack is not acceptable.
 - Get all the margins correct.
+- Fix headers
 
 ## Front matter
 
