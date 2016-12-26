@@ -22,16 +22,21 @@ The project comes with a makefile. Edit `pandoc-source.md` and run:
 
 - ~~Cover Page~~
 - ~~Title Page~~
+- Order of Abstract page
 - Arabic Abstract
 - ~~Approval Page (Masters)~~
-- Approval Page (PhD)
-- Declaration
-- Copyright Joint
-- Copyright IIUM
-- Copyright Student
-- Acknowledgements
+- ~~Approval Page (PhD)~~
+- ~~Declaration~~
+- ~~Copyright Joint~~
+- ~~Copyright IIUM~~
+- ~~Copyright Student~~
+- ~~Acknowledgements~~
+- Page numbers
+- Table of Contents, List of Figures, List of Tables
 
-## Lists
+## Main matter
+
+### Lists
 
 - Table of Contents
 - List of Figures
@@ -39,6 +44,18 @@ The project comes with a makefile. Edit `pandoc-source.md` and run:
 - List of Symbols
 - List of Cases
 - List of Statutes
+
+### Chapters
+
+- Center chapter heading and title
+- Size of chapter heading and title
+- Spacing between chapter heading and title
+- Spacing between first paragraph and chapter title
+
+## Back matter
+
+- Bibliography style
+- Appendices
 
 # License
 
