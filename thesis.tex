@@ -32,7 +32,7 @@
 %******************************
 %      Others
 %*************************
-\usepackage{hyperref}
+\usepackage[hidelinks=yes]{hyperref}
 \usepackage{pdfpages}
 
 %******************************
@@ -46,18 +46,19 @@
 %******************************
 \frontmatter
 %*************************
-\includepdf[addtotoc={1,chapter,1,Cover Page,Cover}]{frontmatter/coverpage.pdf}
-\includepdf[addtotoc={1,chapter,1,Title Page,Title}]{frontmatter/titlepage.pdf}
+\includepdf[addtotoc={1,section,1,Cover Page,Cover}]{frontmatter/coverpage.pdf}
+\includepdf[addtotoc={1,section,1,Title Page,Title}]{frontmatter/titlepage.pdf}
 % Abstract in English
 % Abstract in Arabic
-\includepdf[addtotoc={1,chapter,1,Approval 
+\includepdf[addtotoc={1,section,1,Approval 
 Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
-\includepdf[addtotoc={1,chapter,1,Declaration 
+\includepdf[addtotoc={1,section,1,Declaration 
 ,Declaration}]{frontmatter/declarationPage.pdf}
 % Copyright Joint
 % Copyright IIUM
 % Copyright Student
-\includepdf[addtotoc={1,chapter,1,Dedication,Dedication}]{frontmatter/dedicationPage.pdf}
+\includepdf[addtotoc={1,section,1,Dedication,Dedication}]{frontmatter/dedicationPage.pdf}
+\includepdf[addtotoc={1,section,1,Acknowledgments,Acknowledgments}]{frontmatter/acknowledgmentPage.pdf}
 
 \begin{abstract}
 \lipsum[1]
