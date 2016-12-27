@@ -9,6 +9,8 @@ blanditiis, exercitationem repellat corporis quidem consectetur quae excepturi
 dignissimos sequi ipsa, beatae animi ipsam sit perspiciatis accusantium amet,
 facere? Rem!
 
+![Masjid al-Nabawi, Medinah](figure.jpg){width=\linewidth}
+
 ## Background
 
 @7282364 said Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi blanditiis
