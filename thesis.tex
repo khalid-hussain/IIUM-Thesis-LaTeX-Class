@@ -33,13 +33,18 @@
 %*************************
 \usepackage[hidelinks=yes]{hyperref}
 \usepackage{pdfpages}
+\usepackage{graphicx,grffile}
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
 %******************************
 %      Testing Only
 %*************************
 \usepackage{blindtext}
 \usepackage{lipsum}
-\usepackage[showframe, pass]{geometry} % Show page frames
+% \usepackage[showframe, pass]{geometry} % Show page frames
 
 \begin{document}
 %******************************
@@ -72,11 +77,6 @@ Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
 \mainmatter
 %*************************
 \DoubleSpacing
-\Blinddocument
-\subsubsection{Testing Sub-Sub section}
-
-\Blinddocument
-
 \input{content-from-pandoc-source}
 
 %******************************
