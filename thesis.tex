@@ -32,12 +32,12 @@
 %      Others
 %*************************
 \usepackage[hidelinks=yes]{hyperref}
-\usepackage{pdfpages}
 \usepackage{graphicx,grffile}
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}s
+\usepackage{pdfpages}
 
 %******************************
 %      Testing Only
@@ -54,10 +54,8 @@
 \includepdf[addtotoc={1,chapter,1,Title Page,Title}]{frontmatter/titlepage.pdf}
 % Abstract in English
 % Abstract in Arabic
-\includepdf[addtotoc={1,chapter,1,Approval 
-Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
-\includepdf[addtotoc={1,chapter,1,Declaration 
-,Declaration}]{frontmatter/declarationPage.pdf}
+\includepdf[addtotoc={1,chapter,1,Approval Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
+\includepdf[addtotoc={1,chapter,1,Declaration,Declaration}]{frontmatter/declarationPage.pdf}
 \includepdf[addtotoc={1,chapter,1,Copyright-Joint,Copyright-Joint}]{frontmatter/copyrightJointPage.pdf}
 \includepdf[addtotoc={1,chapter,1,Copyright-IIUM,Copyright-IIUM}]{frontmatter/copyrightIIUMPage.pdf}
 \includepdf[addtotoc={1,chapter,1,Copyright-Student,Copyright-Student}]{frontmatter/copyrightStudentPage.pdf}
