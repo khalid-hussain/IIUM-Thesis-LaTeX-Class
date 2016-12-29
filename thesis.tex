@@ -15,11 +15,10 @@
 \renewcommand{\printlottitle}[1]{\centering\Large\bfseries #1}
 \renewcommand{\chapternumberline}[1]{\MakeTextUppercase{\chaptername\ 
 \numtoName{#1}: }}
+\renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapters should use dots in ToC
 \setcounter{tocdepth}{3}
 \abstractintoc % Show abstract in ToC
 \renewcommand\cftchaptername{\chaptername~}
-
-\usepackage{times} % Use Times font
 
 %******************************
 %      Spacing
@@ -31,6 +30,7 @@
 %******************************
 %      Others
 %*************************
+\usepackage{times} % Use Times font
 \usepackage[hidelinks=yes]{hyperref}
 \usepackage{graphicx,grffile}
 % Scale images if necessary, so that they will not overflow the page
