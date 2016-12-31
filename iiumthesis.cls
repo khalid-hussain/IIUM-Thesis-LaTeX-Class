@@ -72,5 +72,5 @@
 %******************************
 %      Others
 %*************************
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{longtable}
