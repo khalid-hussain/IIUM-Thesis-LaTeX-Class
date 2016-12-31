@@ -58,6 +58,10 @@ The project comes with a makefile. Edit `pandoc-source.md` and run:
 - Bibliography style
 - Appendices
 
+# Credits
+
+Moaaz ibn Mahdi for creating the first template. I've also referenced and used parts of the [University of Malaya template](http://liantze.penguinattack.org/latextypesetting.html#umalayathesis) created by [Lim Lian Tze](http://liantze.penguinattack.org/).
+
 # License
 
 This project is licensed under GNU GPLv3.
