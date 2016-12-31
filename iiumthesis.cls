@@ -43,3 +43,4 @@
 %      Others
 %*************************
 \RequirePackage{hyperref}
+\RequirePackage{longtable}

@@ -29,6 +29,13 @@ reiciendis tempore nesciunt velit corporis totam iusto fugiat exercitationem
 veritatis, sit, sint aliquid laudantium consequuntur quasi, architecto
 obcaecati, ipsam facere!
 
+: The Table's Caption
+
+| sdasd     | adasdas | sadasds                      |
+|-----------|---------|------------------------------|
+| asdasdasd | dasd    | asd                          |
+| d         | dasdas  | assdasdasdasdasdasdasdasdasd |
+
 # Conclusion
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
