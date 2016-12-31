@@ -3,6 +3,17 @@
 
 % \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}
 \LoadClass[12pt, a4paper, oneside, parskip=full]{memoir}
+%******************************
+%      Packages
+%*************************
+% The following is taken from umalayathesis.cls
+\RequirePackage{etoolbox}
+\RequirePackage{calc}
+\RequirePackage{paralist}
+\RequirePackage[english]{babel}
+% ===
+\RequirePackage[T1]{fontenc}
+\RequirePackage{newtxtext,newtxmath}
 
 %******************************
 %      Margins
@@ -12,8 +23,32 @@
 \checkandfixthelayout
 
 %******************************
+% Chapter headings
+%*************************
+%% Taken from umalayathesis.cls
+%% 3 May 2016: One-line chapter title
+\renewcommand\chapterheadstart{\bgroup\SingleSpacing\normalsize\vskip\beforechapskip}
+\appto{\afterchaptertitle}{\egroup}
+\setlength\beforechapskip{0pt}
+\setlength\midchapskip{2\onelineskip}
+\setlength\afterchapskip{\onelineskip}
+\renewcommand*\chapnamefont{\normalsize\bfseries}
+\renewcommand*\chapnumfont{\normalsize\bfseries\centering}
+\renewcommand*\chaptitlefont{\normalsize\bfseries\centering}
+\renewcommand*{\afterchapternum}{: }
+\renewcommand{\printchaptername}{{\chapnamefont\MakeUppercase{\chaptername}}}
+\renewcommand*{\printchaptertitle}[1]{{\chaptitlefont\MakeUppercase{#1}\par}}
+
+%******************************
 %      Table of con../fig../tab..
 %*************************
+\settocdepth{subsection}
+% START Dot separators
+\renewcommand\cftdotsep{0}
+\renewcommand{\cftchapterleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftfigureleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cfttableleader}{\cftdotfill{\cftdotsep}}
+% END Dot separators
 \renewcommand{\contentsname}{TABLE OF CONTENTS}
 \renewcommand{\listfigurename}{LIST OF FIGURES}
 \renewcommand{\listtablename}{LIST OF TABLES}
@@ -22,14 +57,9 @@
 \renewcommand{\printlottitle}[1]{\centering\Large\bfseries #1}
 \renewcommand{\chapternumberline}[1]{\MakeTextUppercase{\chaptername\ 
 \numtoName{#1}: }}
-\setcounter{tocdepth}{3}
 \abstractintoc % Show abstract in ToC
 \renewcommand\cftchaptername{\chaptername~}
 
-%******************************
-%      Packages
-%*************************
-\RequirePackage{times}
 
 %******************************
 %      Spacing
