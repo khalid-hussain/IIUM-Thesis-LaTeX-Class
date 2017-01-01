@@ -12,7 +12,7 @@ DOC=doc/iiumthesis-manual.pdf
 default: pdf
 
 content-from-pandoc:
-	pandoc -t latex -o $(PANDOC-CONTENT) --smart $(PANDOC-SOURCE) --filter pandoc-citeproc --top-level-division=chapter
+	pandoc -t latex -o $(PANDOC-CONTENT) --smart $(PANDOC-SOURCE) --top-level-division=chapter --biblatex
 
 pdf: $(THESIS) content-from-pandoc
 	pdflatex $(THESIS)

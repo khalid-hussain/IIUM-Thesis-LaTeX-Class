@@ -1,4 +1,6 @@
-\documentclass[12pt, a4paper, oneside, parskip=full]{memoir}
+%\documentclass[12pt, a4paper, oneside, parskip=full]{memoir}
+\documentclass[12pt, a4paper, oneside]{memoir}
+\usepackage[T1]{fontenc}
 
 \setulmarginsandblock{2.5cm}{3cm}{*} % Upper-Lower margins
 \setlrmarginsandblock{3.8cm}{2.5cm}{*} % Left-Right margins
@@ -10,6 +12,15 @@
 \usepackage{parskip}
 \setlength{\parindent}{1.2cm} % Paragraph indent
 \frenchspacing % Use single space after end of sentence
+
+%******************************
+%      References
+%*************************
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{ref-test.bib}
 
 %******************************
 %      Others
@@ -114,5 +125,6 @@
 %******************************
 \backmatter
 %*************************
+\printbibliography
 
 \end{document}

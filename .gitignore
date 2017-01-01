@@ -3,6 +3,7 @@
 *.alg
 *.aux
 *.bbl
+*.bcf
 *.blg
 *.dvi
 *.glg
@@ -19,6 +20,7 @@
 *.mtc
 *.mtc1
 *.out
+*.run.xml
 *.synctex.gz
 *.toc
 workspace

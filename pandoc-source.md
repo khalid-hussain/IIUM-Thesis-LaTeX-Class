@@ -69,5 +69,3 @@ veritatis, commodi! Ab molestiae qui modi vero dolorem quam asperiores
 aliquid, quo nemo, saepe suscipit. Corrupti, saepe. Unde voluptate, sint
 quasi.
 
-# REFERENCES
-
