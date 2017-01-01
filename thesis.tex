@@ -48,6 +48,9 @@
 \renewcommand*{\cftchaptername}{\MakeUppercase{\chaptername}\space}
 \renewcommand*{\cftchapteraftersnum}{:\space}
 
+% Single spacing in front matter
+\setlength{\cftbeforechapterskip}{1pt} % Taken from Moaaz's attempt
+
 \cftinsertcode{PlainChapTocLines}{%
   \renewcommand*\cftchapterfont{\normalfont\mdseries\upshape}%
   \renewcommand*\cftchapterpagefont{\normalfont\mdseries\upshape}%

@@ -42,7 +42,7 @@
 %******************************
 %      Table of con../fig../tab..
 %*************************
-\settocdepth{subsection}
+\settocdepth{subsubsection}
 % START Dot separators
 \renewcommand\cftdotsep{0}
 \renewcommand{\cftchapterleader}{\cftdotfill{\cftdotsep}}
@@ -60,6 +60,14 @@
 \abstractintoc % Show abstract in ToC
 \renewcommand\cftchaptername{\chaptername~}
 
+\setlength\cftsectionindent{1.2cm}
+\setlength\cftsubsectionindent{2.0cm}
+\setlength\cftsubsubsectionindent{2.8cm}
+
+% For removing spaces between chapters in LoF and LoT
+%\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+%\addtocontents{lof}{\protect\noaddvspace}
+%\addtocontents{lot}{\protect\noaddvspace}
 
 %******************************
 %      Spacing
