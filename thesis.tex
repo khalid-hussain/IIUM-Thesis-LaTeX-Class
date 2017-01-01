@@ -5,22 +5,6 @@
 \checkandfixthelayout
 
 %******************************
-%      Table of con../fig../tab..
-%*************************
-\renewcommand*\contentsname{Table of Contents}
-\renewcommand*\listtablename{List of Tables}
-\renewcommand*\listfigurename{List of Figures}
-\renewcommand{\printtoctitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
-\renewcommand{\printloftitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
-\renewcommand{\printlottitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
-\renewcommand{\chapternumberline}[1]{\MakeTextUppercase{\chaptername\ 
-\numtoName{#1}: }}
-\renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapters should use dots in ToC
-\setcounter{tocdepth}{3}
-\abstractintoc % Show abstract in ToC
-\renewcommand\cftchaptername{\chaptername~}
-
-%******************************
 %      Spacing
 %*************************
 \usepackage{parskip}
@@ -32,13 +16,31 @@
 %*************************
 \usepackage{times} % Use Times font
 \usepackage{longtable}
-\usepackage[hidelinks=yes]{hyperref}
 \usepackage{graphicx,grffile}
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 % \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}s
 \usepackage{pdfpages}
+\usepackage[hidelinks=yes]{hyperref}
+\usepackage{fmtcount} % Used for \NUMBERstring
+
+%******************************
+%      Table of con../fig../tab..
+%*************************
+\renewcommand\cftdotsep{2}
+\renewcommand*\contentsname{Table of Contents}
+\renewcommand*\listtablename{List of Tables}
+\renewcommand*\listfigurename{List of Figures}
+\renewcommand{\printtoctitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
+\renewcommand{\printloftitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
+\renewcommand{\printlottitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
+%\renewcommand{\chapternumberline}[1]{\chaptername\ #1: }
+\renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapters should use dots in ToC
+\settocdepth{subsection}
+\abstractintoc % Show abstract in ToC
+\renewcommand*{\cftchaptername}{\MakeUppercase{\chaptername}\space}
+\renewcommand*{\cftchapteraftersnum}{:\space}
 
 %******************************
 %      Testing Only
