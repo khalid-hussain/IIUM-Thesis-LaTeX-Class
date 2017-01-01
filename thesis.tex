@@ -7,12 +7,12 @@
 %******************************
 %      Table of con../fig../tab..
 %*************************
-\renewcommand{\contentsname}{TABLE OF CONTENTS}
-\renewcommand{\listfigurename}{LIST OF FIGURES}
-\renewcommand{\listtablename}{LIST OF TABLES}
-\renewcommand{\printtoctitle}[1]{\centering\Large\bfseries #1}
-\renewcommand{\printloftitle}[1]{\centering\Large\bfseries #1}
-\renewcommand{\printlottitle}[1]{\centering\Large\bfseries #1}
+\renewcommand*\contentsname{Table of Contents}
+\renewcommand*\listtablename{List of Tables}
+\renewcommand*\listfigurename{List of Figures}
+\renewcommand{\printtoctitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
+\renewcommand{\printloftitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
+\renewcommand{\printlottitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
 \renewcommand{\chapternumberline}[1]{\MakeTextUppercase{\chaptername\ 
 \numtoName{#1}: }}
 \renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapters should use dots in ToC
