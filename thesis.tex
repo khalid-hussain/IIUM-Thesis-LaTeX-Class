@@ -31,8 +31,9 @@
 %******************************
 %      Table of con../fig../tab..
 %*************************
-\settocdepth{subsection}
-\renewcommand\cftdotsep{2}
+\settocdepth{subsubsection}
+\setsecnumdepth{subsubsection}
+\renewcommand\cftdotsep{0}
 \renewcommand{\printchaptertitle}[1]{\chaptitlefont\MakeUppercase{#1}}
 
 \renewcommand*\contentsname{Table of Contents}
@@ -54,6 +55,7 @@
 \cftinsertcode{PlainChapTocLines}{%
   \renewcommand*\cftchapterfont{\normalfont\mdseries\upshape}%
   \renewcommand*\cftchapterpagefont{\normalfont\mdseries\upshape}%
+  \renewcommand{\cftdot}{\normalfont .}%
 }
 
 \cftinsertcode{MainChapTocLines}{%
