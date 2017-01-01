@@ -14,6 +14,7 @@
 %******************************
 %      Others
 %*************************
+\usepackage{etoolbox}
 \usepackage{times} % Use Times font
 \usepackage{longtable}
 \usepackage{graphicx,grffile}
@@ -30,19 +31,42 @@
 %******************************
 %      Table of con../fig../tab..
 %*************************
+\settocdepth{subsection}
 \renewcommand\cftdotsep{2}
+\renewcommand{\printchaptertitle}[1]{\chaptitlefont\MakeUppercase{#1}}
+
 \renewcommand*\contentsname{Table of Contents}
 \renewcommand*\listtablename{List of Tables}
 \renewcommand*\listfigurename{List of Figures}
+
 \renewcommand{\printtoctitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
 \renewcommand{\printloftitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
 \renewcommand{\printlottitle}[1]{\centering\Large\bfseries\MakeTextUppercase{#1}}
 %\renewcommand{\chapternumberline}[1]{\chaptername\ #1: }
 \renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapters should use dots in ToC
-\settocdepth{subsection}
 \abstractintoc % Show abstract in ToC
 \renewcommand*{\cftchaptername}{\MakeUppercase{\chaptername}\space}
 \renewcommand*{\cftchapteraftersnum}{:\space}
+
+\cftinsertcode{PlainChapTocLines}{%
+  \renewcommand*\cftchapterfont{\normalfont\mdseries\upshape}%
+  \renewcommand*\cftchapterpagefont{\normalfont\mdseries\upshape}%
+}
+
+\cftinsertcode{MainChapTocLines}{%
+  \renewcommand*\cftchapterfont{\normalfont\bfseries\upshape}%
+  \renewcommand*\cftchapterpagefont{\normalfont\bfseries\upshape}%
+}
+
+\apptocmd{\frontmatter}{%
+  \cftinserthook{toc}{PlainChapTocLines}%
+}{}{}
+\apptocmd{\mainmatter}{
+  \addtodef{\insertchapterspace}{}%
+  {\addtocontents{toc}{\protect\vspace*{\baselineskip}}}%
+  \cftinserthook{toc}{MainChapTocLines}%
+%  \renewcommand\chapter{\@ifstar{\mystarchap}{\mychap}}% This line returns an error. I don't know why.
+}{}{}
 
 %******************************
 %      Testing Only
