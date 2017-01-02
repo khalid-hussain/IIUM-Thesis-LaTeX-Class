@@ -1,5 +1,6 @@
 PROPOSAL=myProposal.md
 THESIS=thesis.tex
+THESISW=thesis
 THESIS-CLS=thesis-cls.tex
 THESIS-PDF=thesis.pdf
 PANDOC-CONTENT=content-from-pandoc-source.tex
@@ -15,6 +16,8 @@ content-from-pandoc:
 	pandoc -t latex -o $(PANDOC-CONTENT) --smart $(PANDOC-SOURCE) --top-level-division=chapter --biblatex
 
 pdf: $(THESIS) content-from-pandoc
+	pdflatex $(THESIS)
+	biber $(THESISW)
 	pdflatex $(THESIS)
 	pdflatex $(THESIS)
 
