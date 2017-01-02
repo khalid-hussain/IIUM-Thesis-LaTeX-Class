@@ -7,6 +7,8 @@ Partial pandoc support is available but a template would be appreciated.
 
 The project comes with a makefile. Edit `pandoc-source.md` and run:
 
+- Set up variables in `iiumthesis-config.tex`.
+- Compile all frontmatter by running `compile.sh` in `frontmatter` directory.
 - `make pdf` Creates the resultant PDF file entitled `thesis.pdf`.
 - `make clean` Cleans working LaTeX files. Useful for development or once you've finalized ouput.
 

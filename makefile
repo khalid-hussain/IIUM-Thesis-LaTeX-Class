@@ -11,6 +11,9 @@ DOC=doc/iiumthesis-manual.pdf
 
 default: pdf
 
+frontmatter:
+	
+
 content-from-pandoc:
 	pandoc -t latex -o $(PANDOC-CONTENT) --smart $(PANDOC-SOURCE) --top-level-division=chapter --biblatex
 
