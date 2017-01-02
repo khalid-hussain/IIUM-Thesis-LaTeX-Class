@@ -20,9 +20,11 @@
 *.mtc
 *.mtc1
 *.out
+*.pdf
 *.run.xml
 *.synctex.gz
 *.toc
+frontmatter/*.pdf
 workspace
 workspace/
 workspace/*.*
