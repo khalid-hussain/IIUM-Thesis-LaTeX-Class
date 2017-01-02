@@ -4,15 +4,12 @@ THESIS-CLS=thesis-cls.tex
 THESIS-PDF=thesis.pdf
 PANDOC-CONTENT=content-from-pandoc-source.tex
 PANDOC-SOURCE=pandoc-source.md
-TO-CLEAN=*.aux *.lof *.lot *.toc *.log *.out *.synctex.gz frontmatter/*.aux frontmatter/*.lof frontmatter/*.lot frontmatter/*.toc frontmatter/*.log frontmatter/*.out frontmatter/*.synctex.gz frontmatter/*.bbl frontmatter/*.blg
+TO-CLEAN=*.aux *.lof *.lot *.toc *.log *.out *.synctex.gz frontmatter/*.aux frontmatter/*.lof frontmatter/*.lot frontmatter/*.toc frontmatter/*.log frontmatter/*.out frontmatter/*.synctex.gz frontmatter/*.bbl frontmatter/*.blg *.blg *.run.xml *.bcf *.bbl
 DOC-SOURCE=doc/doc-source.md
 DOC-TEMPLATE=doc/tufte-handout-pandoc.tex
 DOC=doc/iiumthesis-manual.pdf
 
 default: pdf
-
-frontmatter:
-	
 
 content-from-pandoc:
 	pandoc -t latex -o $(PANDOC-CONTENT) --smart $(PANDOC-SOURCE) --top-level-division=chapter --biblatex
