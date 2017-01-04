@@ -21,6 +21,9 @@ pdf: $(THESIS) content-from-pandoc
 	pdflatex $(THESIS)
 	pdflatex $(THESIS)
 
+pdff: $(THESIS) content-from-pandoc
+	pdflatex $(THESIS)
+
 cls-pdf: $(THESIS-CLS) content-from-pandoc
 	pdflatex $(THESIS-CLS)
 	pdflatex $(THESIS-CLS)
