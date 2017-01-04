@@ -95,6 +95,21 @@
 %  \renewcommand\chapter{\@ifstar{\mystarchap}{\mychap}}% This line returns an error. I don't know why.
 }{}{}
 
+%%%%%%%%%%%%
+% Chapter headings
+%%%%%%%%%%%%
+\renewcommand\chapterheadstart{\normalsize\vskip\beforechapskip}
+\setlength\beforechapskip{0pt}
+\setlength\midchapskip {0\onelineskip} %{1.5ex plus 1ex minus .2ex} 
+%%%{0\onelineskip}
+\setlength\afterchapskip{3\onelineskip}
+\renewcommand*\chapnamefont{\large\bfseries}
+\renewcommand*\chapnumfont{\large\bfseries\centering}
+\renewcommand*\chaptitlefont{\SingleSpacing\large\bfseries\centering}
+\renewcommand{\printchaptername}{{\chapnamefont\MakeUppercase{\chaptername}}}
+\renewcommand*{\afterchapternum}{\vskip\midchapskip}
+\renewcommand*{\printchaptertitle}[1]{{\chaptitlefont\MakeUppercase{#1}\par}}
+
 %******************************
 %      Testing Only
 %*************************
