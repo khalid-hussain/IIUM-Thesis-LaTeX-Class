@@ -95,13 +95,12 @@
 %  \renewcommand\chapter{\@ifstar{\mystarchap}{\mychap}}% This line returns an error. I don't know why.
 }{}{}
 
-%%%%%%%%%%%%
-% Chapter headings
-%%%%%%%%%%%%
+%******************************
+%      Chapter headings
+%*************************
 \renewcommand\chapterheadstart{\normalsize\vskip\beforechapskip}
 \setlength\beforechapskip{0pt}
 \setlength\midchapskip {0\onelineskip} %{1.5ex plus 1ex minus .2ex} 
-%%%{0\onelineskip}
 \setlength\afterchapskip{3\onelineskip}
 \renewcommand*\chapnamefont{\large\bfseries}
 \renewcommand*\chapnumfont{\large\bfseries\centering}
@@ -126,7 +125,8 @@
 
 \includepdf[addtotoc={1,chapter,1,Cover Page,Cover}]{frontmatter/coverPage.pdf}
 \includepdf[addtotoc={1,chapter,1,Title Page,Title}]{frontmatter/titlePage.pdf}
-% Abstract in English
+\includepdf[addtotoc={1,chapter,1,English 
+Abstract,English Abstract}]{frontmatter/englishAbstractPage.pdf}
 % Abstract in Arabic
 \includepdf[pagecommand={},addtotoc={1,chapter,1,Approval Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
 \includepdf[pagecommand={},addtotoc={1,chapter,1,Declaration,Declaration}]{frontmatter/declarationPage.pdf}
@@ -136,10 +136,10 @@
 \includepdf[pagecommand={},addtotoc={1,chapter,1,Dedication,Dedication}]{frontmatter/dedicationPage.pdf}
 \includepdf[pagecommand={},addtotoc={1,chapter,1,Acknowledgments,Acknowledgments}]{frontmatter/acknowledgmentPage.pdf}
 
-\begin{abstract}
-\lipsum[1]
-\end{abstract}
-\newpage
+%\begin{abstract}
+%\lipsum[1]
+%\end{abstract}
+%\newpage
 
 \tableofcontents*
 \listoftables
