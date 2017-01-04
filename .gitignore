@@ -5,6 +5,7 @@
 *.bbl
 *.bcf
 *.blg
+content-from-pandoc-source.tex
 *.dvi
 *.glg
 *.glo
