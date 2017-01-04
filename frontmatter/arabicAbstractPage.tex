@@ -1,0 +1,32 @@
+% !TeX program = xelatex
+\documentclass[12pt, a4paper]{memoir}
+\setulmarginsandblock{2.5cm}{3cm}{*} % Upper-Lower margins
+\setlrmarginsandblock{3.8cm}{2.5cm}{*} % Left-Right margins
+\checkandfixthelayout
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\newfontfamily\arabicfont[
+Script=Arabic,%
+Numbers=Proportional,%
+Scale=1.5%
+]{Traditional Arabic}
+\setmainlanguage{arabic}
+
+\usepackage{xspace}
+\usepackage{times}
+
+\input{../iiumthesis-config}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{Large}
+\begin{center}
+خلاصة البحث
+\end{center}
+\end{Large}
+\vspace{48pt}
+
+\noindent \myArabicAbstract
+\end{document}

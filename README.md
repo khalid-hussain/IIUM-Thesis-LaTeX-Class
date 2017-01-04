@@ -5,10 +5,25 @@ Partial pandoc support is available but a template would be appreciated.
 
 # Usage
 
+## Frontmatter
+
+The frontmatter is a dependency for the thesis. The `compile.sh` script in the
+`frontmatter` directory will help with this. This script has three options:
+
+- `./compile.sh arabic` Compiles the Arabic abstract using XeLaTeX. Make sure you
+  have the "Traditional Arabic" font available otherwise it will fail. You may change
+  the font if you wish.
+- `./compile.sh all` Compiles all the frontmatter, both the English and Arabic frontmatter.
+- `./compile.sh` The default. Compiles only the English frontmatter.
+
+At this point, ensure that you at least run the default option.
+
+## General
+
 The project comes with a makefile. Edit `pandoc-source.md` and run:
 
 - Set up variables in `iiumthesis-config.tex`.
-- Compile all frontmatter by running `compile.sh` in `frontmatter` directory.
+- Compile the frontmatter. Instructions given above.
 - `make pdf` Creates the resultant PDF file entitled `thesis.pdf`.
 - `make clean` Cleans working LaTeX files. Useful for development or once you've finalized ouput.
 
