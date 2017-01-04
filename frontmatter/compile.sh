@@ -31,8 +31,8 @@ compileAll(){
 
 if [ "$1" == "arabic" ]; then
   compileArabic
-elif [ "$1" == "english" ]; then
-  compileEnglish
-else
+elif [ "$1" == "all" ]; then
   compileAll
+else
+  compileEnglish
 fi
