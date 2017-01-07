@@ -3,6 +3,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
+%******************************
+%      Margins
+%*************************
 \setulmarginsandblock{2.5cm}{3cm}{*} % Upper-Lower margins
 \setlrmarginsandblock{3.8cm}{2.5cm}{*} % Left-Right margins
 \checkandfixthelayout
@@ -27,7 +30,7 @@
 %      Others
 %*************************
 \usepackage{etoolbox}
-\usepackage{times} % Use Times font
+\usepackage{newtxtext,newtxmath} % Use Times font
 \usepackage{longtable, booktabs} % For tables
 \usepackage{pdflscape} % 
 \usepackage{ltablex, array}
@@ -40,6 +43,7 @@
 %\usepackage{fmtcount} % Used for \NUMBERstring
 \usepackage{url}
 \urlstyle{same} % Used to style URLs in the default font
+\usepackage{paralist}
 \usepackage[%
   hidelinks=yes,
   pdfstartview=FitH
@@ -73,6 +77,10 @@
 
 % Single spacing in front matter
 \setlength{\cftbeforechapterskip}{1pt} % Taken from Moaaz's attempt
+
+% No leader dots in both lists
+\renewcommand\cfttabledotsep{\cftnodots}
+\renewcommand\cftfiguredotsep{\cftnodots}
 
 \cftinsertcode{PlainChapTocLines}{%
   \renewcommand*\cftchapterfont{\normalfont\mdseries\upshape}%
@@ -136,13 +144,10 @@ Abstract,English Abstract}]{frontmatter/englishAbstractPage.pdf}
 \includepdf[pagecommand={},addtotoc={1,chapter,1,Dedication,Dedication}]{frontmatter/dedicationPage.pdf}
 \includepdf[pagecommand={},addtotoc={1,chapter,1,Acknowledgments,Acknowledgments}]{frontmatter/acknowledgmentPage.pdf}
 
-%\begin{abstract}
-%\lipsum[1]
-%\end{abstract}
-%\newpage
-
 \tableofcontents*
+\newpage
 \listoftables
+\newpage
 \listoffigures
 
 %******************************
