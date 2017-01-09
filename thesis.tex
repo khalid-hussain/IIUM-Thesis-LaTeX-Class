@@ -1,7 +1,7 @@
 %\documentclass[12pt, a4paper, oneside, parskip=full]{memoir}
 \documentclass[12pt, a4paper, oneside]{memoir}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 
 %******************************
 %      Margins
@@ -29,8 +29,11 @@
 %******************************
 %      Others
 %*************************
-\usepackage{etoolbox}
+% Fonts
 \usepackage{newtxtext,newtxmath} % Use Times font
+\usepackage{inconsolata}
+
+\usepackage{etoolbox}
 \usepackage{longtable, booktabs} % For tables
 \usepackage{pdflscape} % 
 \usepackage{ltablex, array}
@@ -44,6 +47,31 @@
 \usepackage{url}
 \urlstyle{same} % Used to style URLs in the default font
 \usepackage{paralist}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+	basicstyle=\footnotesize\ttfamily,
+	numbers=left,
+	frame=leftline,
+	keywordstyle=\color[rgb]{0.13,0.29,0.53}\bfseries,
+	stringstyle=\color[rgb]{0.31,0.60,0.02},
+	commentstyle=\color[rgb]{0.56,0.35,0.01}\itshape,
+	numberstyle=\footnotesize\ttfamily,
+	stepnumber=1,
+	numbersep=10pt,
+	backgroundcolor=\color[RGB]{248,248,248},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=true,
+	breakautoindent=true,
+	escapeinside={\%*}{*)},
+	linewidth=\textwidth,
+	basewidth=0.5em,
+}
 \usepackage[%
   hidelinks=yes,
   pdfstartview=FitH

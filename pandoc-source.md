@@ -18,6 +18,28 @@ vero placeat, aspernatur voluptatibus reiciendis incidunt suscipit, accusamus
 aperiam modi, saepe quisquam aliquam harum ipsa! Suscipit aspernatur dolorum
 nobis, molestiae?
 
+```java
+public class Test {
+    static Set<Thread> updateThreads = new HashSet<Thread>();
+
+    public static void main(String[] args) {
+        ConcurrentMap<Integer, String> concurrentMap = new ConcurrentHashMap<Integer, String>();
+
+        for (int i = 0; i < 1000; i++) {
+            startUpdateThread(i, concurrentMap);
+        }
+
+        for (Map.Entry<Integer, String> entry : concurrentMap.entrySet()) {
+            System.out.println("Key :" + entry.getKey() + " Value:" + entry.getValue());
+        }
+
+        for (Thread thread : updateThreads) {
+            thread.interrupt();
+        }
+    }
+}
+```
+
 # Literature Review
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda unde
