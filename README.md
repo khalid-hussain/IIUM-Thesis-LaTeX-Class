@@ -87,4 +87,7 @@ The files under the `_reference` directory are not.
 They are for project development purposes only.
 The rights are reserved by their respective owners.
 
+The rights to the IIUM emblem included in the `frontmatter` directory are
+reserved by the International Islamic University Malaysia.
+
 The `tufte-handout-pandoc.tex` under the `doc` folder may not be. It was created by Iago Mosqueira - JRC. 2013, and is available from [Gist](https://gist.github.com/reinholdsson/7426608/566d8104363cd2fef2d6dd50e90aceab377b4a45#file-tufte-handout-template).
