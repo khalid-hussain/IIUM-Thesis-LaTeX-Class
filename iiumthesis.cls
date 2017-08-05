@@ -30,7 +30,7 @@
 %*************************
 % The following is taken from umalayathesis.cls
 \RequirePackage{etoolbox}
-\RequirePackage{newtxtext,newtxmath}
+\RequirePackage{newtxtext,newtxmath} % Times New Roman font
 \RequirePackage{longtable, booktabs} % For tables
 \RequirePackage{pdflscape} % 
 \RequirePackage{ltablex, array}
