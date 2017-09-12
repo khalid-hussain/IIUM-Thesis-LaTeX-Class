@@ -16,17 +16,17 @@ content-from-pandoc:
 	pandoc -t latex -o $(PANDOC-CONTENT) --smart $(PANDOC-SOURCE) --top-level-division=chapter --biblatex --listings
 
 pdf: $(THESIS) content-from-pandoc
-	pdflatex $(THESIS)
+	lualatex $(THESIS)
 	biber $(THESISW)
-	pdflatex $(THESIS)
-	pdflatex $(THESIS)
+	lualatex $(THESIS)
+	lualatex $(THESIS)
 
 pdff: $(THESIS) content-from-pandoc
-	pdflatex $(THESIS)
+	lualatex $(THESIS)
 
 cls-pdf: $(THESIS-CLS) content-from-pandoc
-	pdflatex $(THESIS-CLS)
-	pdflatex $(THESIS-CLS)
+	lualatex $(THESIS-CLS)
+	lualatex $(THESIS-CLS)
 
 doc: $(DOC-SOURCE)
 	pandoc $(DOC-SOURCE) -t latex -o $(DOC) --template=$(DOC-TEMPLATE) --smart
