@@ -24,6 +24,7 @@ content-from-pandoc-source.tex
 *.pdf
 *.run.xml
 *.synctex.gz
+*.synctex.gz(busy)
 *.toc
 frontmatter/*.pdf
 workspace
