@@ -174,21 +174,80 @@
 
 \pagestyle{plain}
 
-% For Proposal Defense only
-\includepdf[addtotoc={1,chapter,1,Proposal Defense Cover,Proposal Defense Cover}]{frontmatter/proposalDefenseCover.pdf}
+% Proposal Defense Cover
+\includepdf[
+  addtotoc={1,chapter,1,Proposal Defense Cover,Proposal Defense Cover}
+]
+{frontmatter/proposalDefenseCover.pdf}
 
-\includepdf[addtotoc={1,chapter,1,Cover Page,Cover}]{frontmatter/coverPage.pdf}
-\includepdf[addtotoc={1,chapter,1,Title Page,Title}]{frontmatter/titlePage.pdf}
-\includepdf[addtotoc={1,chapter,1,English 
-Abstract,English Abstract}]{frontmatter/englishAbstractPage.pdf}
+% Cover Page
+\includepdf[
+  addtotoc={1,chapter,1,Cover Page,Cover}
+]
+{frontmatter/coverPage.pdf}
+
+% Title Page
+\includepdf[
+  addtotoc={1,chapter,1,Title Page,Title}
+]
+{frontmatter/titlePage.pdf}
+
+% Abstract in English
+\includepdf[
+  addtotoc={1,chapter,1,English Abstract,English Abstract}
+]
+{frontmatter/englishAbstractPage.pdf}
+
 % Abstract in Arabic
-\includepdf[pagecommand={},addtotoc={1,chapter,1,Approval Page,Approval Page}]{frontmatter/approvalPage-PhD.pdf}
-\includepdf[pagecommand={},addtotoc={1,chapter,1,Declaration,Declaration}]{frontmatter/declarationPage.pdf}
-\includepdf[pagecommand={},addtotoc={1,chapter,1,Copyright-Joint,Copyright-Joint}]{frontmatter/copyrightJointPage.pdf}
-\includepdf[pagecommand={},addtotoc={1,chapter,1,Copyright-IIUM,Copyright-IIUM}]{frontmatter/copyrightIIUMPage.pdf}
-\includepdf[pagecommand={},addtotoc={1,chapter,1,Copyright-Student,Copyright-Student}]{frontmatter/copyrightStudentPage.pdf}
-\includepdf[pagecommand={},addtotoc={1,chapter,1,Dedication,Dedication}]{frontmatter/dedicationPage.pdf}
-\includepdf[pagecommand={},addtotoc={1,chapter,1,Acknowledgments,Acknowledgments}]{frontmatter/acknowledgmentPage.pdf}
+
+% Approval Page
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Approval Page,Approval Page}
+]
+{frontmatter/approvalPage-PhD.pdf}
+
+% Declaration Page
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Declaration,Declaration}
+]
+{frontmatter/declarationPage.pdf}
+
+% Copyright (Joint)
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Copyright-Joint,Copyright-Joint}
+]
+{frontmatter/copyrightJointPage.pdf}
+
+% Copyright (IIUM)
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Copyright-IIUM,Copyright-IIUM}
+]
+{frontmatter/copyrightIIUMPage.pdf}
+
+% Copyright (Student)
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Copyright-Student,Copyright-Student}
+]
+{frontmatter/copyrightStudentPage.pdf}
+
+% Dedication Page
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Dedication,Dedication}
+]
+{frontmatter/dedicationPage.pdf}
+
+% Acknowledgments
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Acknowledgments,Acknowledgments}
+]
+{frontmatter/acknowledgmentPage.pdf}
 
 \tableofcontents*
 \newpage
