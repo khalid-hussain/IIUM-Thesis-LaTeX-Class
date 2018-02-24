@@ -29,11 +29,14 @@ adequate, in scope and quality, as a dissertation for the degree of \myDegree.
 \hfill Supervisor
 \\[24pt]
 
-\hfill \makebox[2in]{\dotfill}
 
-\hfill \myCoSupervisor
+\ifdefined\myCoSupervisor
+  \hfill \makebox[2in]{\dotfill}
 
-\hfill Co-Supervisor\\[24pt]
+  \hfill \myCoSupervisor
+
+  \hfill Co-Supervisor\\[24pt]
+\fi
 
 \noindent I certify that I have read this study and that in my opinion it 
 conforms to acceptable standards of scholarly presentation and is fully 
@@ -57,6 +60,11 @@ accepted as a fulfilment of the requirement for the degree of Master of
 
 \hfill Head, Department of \myDepartment\\[24pt]
 
+% If Co-Supervisor is defined, the following paragraph moves to the next page, otherwise it splits between the pages; it doesn't look nice.
+\ifdefined\myCoSupervisor
+\newpage
+\fi
+
 \noindent This dissertation was submitted to the Kulliyyah of \myKulliyah and 
 is accepted as a fulfilment of the requirement for the degree of Master of 
 \mySubject.\\[24pt]
@@ -66,4 +74,5 @@ is accepted as a fulfilment of the requirement for the degree of Master of
 \hfill \myKulliyahDean
 
 \hfill Dean, \myKulliyah\\[24pt]
+
 \end{document}
