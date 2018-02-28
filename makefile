@@ -13,7 +13,7 @@ DOC=doc/iiumthesis-manual.pdf
 default: pdf
 
 content-from-pandoc:
-	pandoc -t latex -o $(PANDOC-CONTENT) --smart $(PANDOC-SOURCE) --top-level-division=chapter --biblatex --listings
+	pandoc -t latex -o $(PANDOC-CONTENT) $(PANDOC-SOURCE) --top-level-division=chapter --biblatex --listings
 
 pdf: $(THESIS) content-from-pandoc
 	lualatex $(THESIS)
@@ -29,7 +29,7 @@ cls-pdf: $(THESIS-CLS) content-from-pandoc
 	lualatex $(THESIS-CLS)
 
 doc: $(DOC-SOURCE)
-	pandoc $(DOC-SOURCE) -t latex -o $(DOC) --template=$(DOC-TEMPLATE) --smart
+	pandoc $(DOC-SOURCE) -t latex -o $(DOC) --template=$(DOC-TEMPLATE)
 
 .PHONY: clean
 
