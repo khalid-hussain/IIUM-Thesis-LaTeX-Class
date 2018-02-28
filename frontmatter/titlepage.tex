@@ -12,7 +12,12 @@
 \thispagestyle{empty}
 \begin{LARGE}
 \begin{center}
-\MakeTextUppercase{\myTitle}\\~\\
+\MakeUppercase{\myTitle}\\
+\ifdefined\mySubtitle
+\MakeUppercase{\mySubtitle}\\~\\
+\else
+\\~\\
+\fi
 BY\\~\\
 \MakeTextUppercase{\myName}\\
 \vfill
