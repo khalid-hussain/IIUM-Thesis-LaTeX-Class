@@ -1,5 +1,5 @@
 % !TeX program = xelatex
-\documentclass[12pt, a4paper]{memoir}
+\documentclass[a4paper, oneside]{memoir}
 \setulmarginsandblock{2.5cm}{3cm}{*} % Upper-Lower margins
 \setlrmarginsandblock{3.8cm}{2.5cm}{*} % Left-Right margins
 \checkandfixthelayout
@@ -9,7 +9,6 @@
 \newfontfamily\arabicfont[
 Script=Arabic,%
 Numbers=Proportional,%
-Scale=1.5%
 ]{Traditional Arabic}
 \setmainlanguage{arabic}
 
@@ -19,14 +18,18 @@ Scale=1.5%
 \input{../iiumthesis-config}
 
 \begin{document}
-\thispagestyle{empty}
+\thispagestyle{plain}
 
-\begin{Large}
 \begin{center}
-\textbf{خلاصة البحث}
+\fontsize{20bp}{20bp}\selectfont\textbf{خلاصة البحث}
 \end{center}
-\end{Large}
-\vspace{48pt}
+
+\vspace{48bp}
+
+\fontsize{18bp}{22bp}\selectfont
 
 \noindent \myArabicAbstract
+
+\pagenumbering{roman}
+\setcounter{page}{\ArAbstractFolio}
 \end{document}

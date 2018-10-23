@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{memoir}
+\documentclass[12pt, a4paper, oneside]{memoir}
 \setulmarginsandblock{2.5cm}{3cm}{*} % Upper-Lower margins
 \setlrmarginsandblock{3.8cm}{2.5cm}{*} % Left-Right margins
 \checkandfixthelayout
@@ -9,14 +9,16 @@
 \input{../iiumthesis-config}
 
 \begin{document}
-\thispagestyle{empty}
+\thispagestyle{plain}
 
-\begin{large}
 \begin{center}
-\textbf{\MakeUppercase{Abstract}}
+\textbf{\fontsize{14bp}{16bp}\selectfont\MakeUppercase{Abstract}}
 \end{center}
-\end{large}
-\vspace{48pt}
+
+\vspace{48bp}
 
 \noindent \myEnglishAbstract
+
+\pagenumbering{roman}
+\setcounter{page}{\EnAbstractFolio}
 \end{document}
