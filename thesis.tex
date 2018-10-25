@@ -174,11 +174,15 @@
 
 \pagestyle{plain}
 
+% ======================
 % Proposal Defense Cover
-\includepdf[
-  addtotoc={1,chapter,1,Proposal Defense Cover,Proposal Defense Cover}
-]
-{frontmatter/proposalDefenseCover.pdf}
+% Uncomment when needed.
+
+%\includepdf[
+%  addtotoc={1,chapter,1,Proposal Defense Cover,Proposal Defense Cover}
+%]
+%{frontmatter/proposalDefenseCover.pdf}
+% ======================
 
 % Cover Page
 \includepdf[
@@ -186,6 +190,7 @@
 ]
 {frontmatter/coverPage.pdf}
 
+\setcounter{page}{1}
 % Title Page
 \includepdf[
   addtotoc={1,chapter,1,Title Page,Title}
@@ -194,11 +199,17 @@
 
 % Abstract in English
 \includepdf[
+  pagecommand={},
   addtotoc={1,chapter,1,English Abstract,English Abstract}
 ]
 {frontmatter/englishAbstractPage.pdf}
 
 % Abstract in Arabic
+\includepdf[
+  pagecommand={},
+  addtotoc={1,chapter,1,Arabic Abstract,Arabic Abstract}
+]
+{frontmatter/arabicAbstractPage.pdf}
 
 % Approval Page
 \includepdf[
