@@ -225,26 +225,33 @@
 ]
 {frontmatter/declarationPage.pdf}
 
-% Copyright (Joint)
-\includepdf[
-  pagecommand={},
-  addtotoc={1,chapter,1,Copyright-Joint,Copyright-Joint}
-]
-{frontmatter/copyrightJointPage.pdf}
 
-% Copyright (IIUM)
-\includepdf[
-  pagecommand={},
-  addtotoc={1,chapter,1,Copyright-IIUM,Copyright-IIUM}
-]
-{frontmatter/copyrightIIUMPage.pdf}
-
-% Copyright (Student)
+% ==========================
+% Copyright page
+% Choose one and uncomment.
+% --------------------------
+%% JOINT
+%\includepdf[
+%  pagecommand={},
+%  addtotoc={1,chapter,1,Copyright-Joint,Copyright-Joint}
+%]
+%{frontmatter/copyrightJointPage.pdf}
+% --------------------------
+%% IIUM ONLY
+%\includepdf[
+%  pagecommand={},
+%  addtotoc={1,chapter,1,Copyright-IIUM,Copyright-IIUM}
+%]
+%{frontmatter/copyrightIIUMPage.pdf}
+% --------------------------
+%% STUDENT ONLY
 \includepdf[
   pagecommand={},
   addtotoc={1,chapter,1,Copyright-Student,Copyright-Student}
 ]
 {frontmatter/copyrightStudentPage.pdf}
+% ==========================
+
 
 % Dedication Page
 \includepdf[
