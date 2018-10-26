@@ -125,6 +125,10 @@
 \renewcommand\cfttabledotsep{\cftnodots}
 \renewcommand\cftfiguredotsep{\cftnodots}
 
+% Add 'Figure' and 'Table' before entries in LoF and LoT.
+\renewcommand*{\cftfigurename}{\figurename\space}
+\renewcommand*{\cfttablename}{\tablename\space}
+
 \cftinsertcode{PlainChapTocLines}{%
   \renewcommand*\cftchapterfont{\normalfont\mdseries\upshape}%
   \renewcommand*\cftchapterpagefont{\normalfont\mdseries\upshape}%
