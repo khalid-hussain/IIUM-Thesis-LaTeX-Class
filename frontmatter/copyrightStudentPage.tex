@@ -1,7 +1,17 @@
-\documentclass[12pt, a4paper]{memoir}
-\setulmarginsandblock{2.5cm}{3cm}{*} % Upper-Lower margins
-\setlrmarginsandblock{3.8cm}{2.5cm}{*} % Left-Right margins
+\documentclass[12pt, a4paper, oneside, showtrims]{memoir}
+
+% Original margins
+%\setulmarginsandblock{2.5cm}{3cm}{*} % Upper-Lower margins
+%\setlrmarginsandblock{3.8cm}{2.5cm}{*} % Left-Right margins
+
+% Margins taking the border into consideration
+\setulmarginsandblock{2.7cm}{3.2cm}{*} % Upper-Lower margins
+\setlrmarginsandblock{4.0cm}{2.7cm}{*} % Left-Right margins
 \checkandfixthelayout
+
+\trimFrame
+\settrimmedsize{242mm}{147mm}{*}
+\settrims{25mm}{25mm}
 
 \usepackage{xspace}
 \usepackage{mathptmx}
@@ -63,4 +73,6 @@ IIUM Intellectual Property Right and Commercialization policy.\\[48pt]
 
 \noindent \makebox[2in]{\dotfill} \hfill \makebox[2in]{\dotfill}\\
 \parbox{2in}{\centering Signature} \hfill \parbox{2in}{\centering Date}
+
+\vfill
 \end{document}
