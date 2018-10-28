@@ -13,6 +13,32 @@
 \settrimmedsize{242mm}{147mm}{*}
 \settrims{25mm}{25mm}
 
+% Remove Trim marks
+\renewcommand*{\tmarkml}{%
+    \begin{picture}(0,0)%
+    \unitlength 1mm
+    \thinlines
+    \put(-2,0){\line(-1,0){0}}
+    \end{picture}}
+\renewcommand*{\tmarkmr}{%
+    \begin{picture}(0,0)%
+    \unitlength 1mm
+    \thinlines
+    \put(2,0){\line(1,0){0}}
+    \end{picture}}
+\renewcommand*{\tmarktm}{%
+    \begin{picture}(0,0)%
+    \unitlength 1mm
+    \thinlines
+    \put(-2,0){\line(-1,0){0}}
+    \end{picture}}
+\renewcommand*{\tmarkbm}{%
+    \begin{picture}(0,0)%
+    \unitlength 1mm
+    \thinlines
+    \put(2,0){\line(1,0){0}}
+    \end{picture}}
+
 \usepackage{xspace}
 \usepackage{mathptmx}
 
