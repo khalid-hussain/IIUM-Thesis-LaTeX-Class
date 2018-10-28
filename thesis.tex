@@ -57,7 +57,7 @@
 \usepackage{placeins}
 
 \usepackage{pdfpages}
-%\usepackage{fmtcount} % Used for \NUMBERstring
+\usepackage{fmtcount} % Used for \NUMBERstring
 \usepackage{url}
 \urlstyle{same} % Used to style URLs in the default font
 \usepackage{paralist}
@@ -118,6 +118,9 @@
 \renewcommand*{\cftchaptername}{\MakeUppercase{\chaptername}\space}
 \renewcommand*{\cftchapteraftersnum}{:\space}
 
+% Chapter number as words in ToC
+\renewcommand{\chapternumberline}[1]{\MakeUppercase{\cftchaptername}\NUMBERstringnum{#1}:\space}
+
 % Single spacing in front matter
 \setlength{\cftbeforechapterskip}{1pt} % Taken from Moaaz's attempt
 
@@ -143,12 +146,17 @@
 \apptocmd{\frontmatter}{%
   \cftinserthook{toc}{PlainChapTocLines}%
 }{}{}
+
 \apptocmd{\mainmatter}{
   \addtodef{\insertchapterspace}{}%
   {\addtocontents{toc}{\protect\vspace*{\baselineskip}}}%
   \cftinserthook{toc}{MainChapTocLines}%
-%  \renewcommand\chapter{\@ifstar{\mystarchap}{\mychap}}% This line returns an error. I don't know why.
 }{}{}
+
+% Remove space between figure/table listings of different chapters
+\renewcommand*{\insertchapterspace}{%
+    \addtocontents{lof}{\protect\addvspace{0pt}}%
+    \addtocontents{lot}{\protect\addvspace{0pt}}}
 
 %******************************
 %      Chapter headings
@@ -190,28 +198,28 @@
 
 % Cover Page
 \includepdf[
-  addtotoc={1,chapter,1,Cover Page,Cover}
+%  addtotoc={1,chapter,1,Cover Page,Cover}
 ]
 {frontmatter/coverPage.pdf}
 
 \setcounter{page}{1}
 % Title Page
 \includepdf[
-  addtotoc={1,chapter,1,Title Page,Title}
+%  addtotoc={1,chapter,1,Title Page,Title}
 ]
 {frontmatter/titlePage.pdf}
 
 % Abstract in English
 \includepdf[
   pagecommand={},
-  addtotoc={1,chapter,1,English Abstract,English Abstract}
+  addtotoc={1,chapter,1,Abstract,Abstract}
 ]
 {frontmatter/englishAbstractPage.pdf}
 
 % Abstract in Arabic
 \includepdf[
   pagecommand={},
-  addtotoc={1,chapter,1,Arabic Abstract,Arabic Abstract}
+  addtotoc={1,chapter,1,Abstract in Arabic,Abstract in Arabic}
 ]
 {frontmatter/arabicAbstractPage.pdf}
 
@@ -237,21 +245,21 @@
 %% JOINT
 %\includepdf[
 %  pagecommand={},
-%  addtotoc={1,chapter,1,Copyright-Joint,Copyright-Joint}
+%  addtotoc={1,chapter,1,Copyright,Copyright}
 %]
 %{frontmatter/copyrightJointPage.pdf}
 % --------------------------
 %% IIUM ONLY
 %\includepdf[
 %  pagecommand={},
-%  addtotoc={1,chapter,1,Copyright-IIUM,Copyright-IIUM}
+%  addtotoc={1,chapter,1,Copyright,Copyright}
 %]
 %{frontmatter/copyrightIIUMPage.pdf}
 % --------------------------
 %% STUDENT ONLY
 \includepdf[
   pagecommand={},
-  addtotoc={1,chapter,1,Copyright-Student,Copyright-Student}
+  addtotoc={1,chapter,1,Copyright,Copyright}
 ]
 {frontmatter/copyrightStudentPage.pdf}
 % ==========================
