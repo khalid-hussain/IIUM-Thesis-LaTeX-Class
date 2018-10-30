@@ -101,7 +101,7 @@
 \renewcommand{\printchaptertitle}[1]{\chaptitlefont\MakeUppercase{#1}}
 
 \addto\captionsamerican{% Needed if using Babel with American
-  \renewcommand*\contentsname{Table of Contents}
+  \renewcommand*\contentsname{\fontsize{14bp}{16bp}\selectfont Table of Contents}
   \renewcommand*\listtablename{List of Tables}
   \renewcommand*\listfigurename{List of Figures}
   \renewcommand*{\bibname}{REFERENCES}
@@ -294,6 +294,7 @@
 %******************************
 \backmatter
 %*************************
+%\bibliography
 \printbibliography[title={REFERENCES}]
 
 \end{document}
